@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 4 Portal Fulan</title>
+ <style>
+ body {
+     font-family: 'Segoe UI', Arial, sans-serif;
+     margin: 0;
+     background-color: #fcfeff;
+     color: #222;
+ }
+
+ /* HEADER */
+ header {
+     background-color: #355485;
+     color: white;
+     text-align: center;
+     padding: 10px 0;
+ }
+
+ header h1 {
+     margin: 0;
+     font-size: 28px;
+ }
+
+ /* NAV */
+ nav {
+     background-color: #4f90c6;
+     text-align: center;
+     padding: 10px 0;
+     margin: 0;
+     
+ }
+
+ nav a {
+     color: white;
+     text-decoration: none;
+     margin: 0 15px;
+     font-weight: bold;
+     margin-left: 10px;
+ }
+
+ nav a:hover {
+     text-decoration: underline;
+ }
+
+ /* LAYOUT */
+ .container {
+     width: 90%;
+     max-width: 1100px;
+     margin: 20px auto;
+     overflow: auto;
+ }
+
+ section {
+     float: left;
+     width: 68%;
+     background-color: white;
+     border: 1px solid #ddd;
+     border-radius: 8px;
+     padding: 16px;
+     box-sizing: border-box;
+     
+     
+ }
+
+ aside {
+     float: right;
+     width: 28%;
+     background-color: #cbdde9;
+     border: 1px solid #bbb;
+     border-radius: 8px;
+     padding: 16px;
+     box-sizing: border-box;
+    
+ }
+
+ h2 {
+     color: #355485;
+     margin-top: 0;
+     
+ }
+
+ article img {
+     width: 100%;
+     border-radius: 6px;
+     margin-bottom: 10px;
+ }
+
+ /* TABEL DATA */
+ table {
+     border-collapse: collapse;
+     width: 100%;
+     margin: 12px 0;
+ }
+
+ th,
+ td {
+     border: 1px solid #ccc;
+     padding: 8px;
+     text-align: left;
+ }
+
+ th {
+     background-color: #f1f5f9;
+ }
+
+ /* IFRAME */
+ iframe {
+     width: 100%;
+     height: 250px;
+     border: 1px solid #999;
+     border-radius: 6px;
+ }
+
+ /* FOOTER */
+ footer {
+     clear: both;
+     background-color: #355485;
+     color: white;
+     text-align: center;
+     padding: 14px 0;
+     margin-top: 20px;
+ }
+
+ footer a {
+     color: #cbdde9;
+     text-decoration: none;
+ }
+
+ footer a:hover {
+     text-decoration: underline;
+ }
+
+ /* RESPONSIVE SEDIKIT */
+ @media (max-width: 768px) {
+
+     section,
+     aside {
+         float: none;
+         width: 100%;
+     }
+ }
+
+ </style>
+</head>
+<body>
+    <!---Header-->
+       <header class="header">
+        <h1>Portal Fulan — Berita Coding Lucu Tapi Keren 😎 💻<h1>
+        <p style="font-size: 15px; font-weight: normal;">"Dimana bug bukan musuh, tapi guru kehidupan."</p>
+        <!---navbar-->
+        <nav class="navbar" style="font-size: 15px;">
+            <a href="#Berita Utama">Berita Utama</a>
+            <a href="#Fakta Unik">Fakta Unik</a>
+            <a href="#Video & Iframe">Video & Iframe</a>
+            <a href="#Kontak Redaksi">Kontak Redaksi</a>
+        </nav>
+    </header>
+
+    <!---Main Article-->
+    <main>
+        <article class="article" style="padding: 50px; padding-top: 20px; border-radius: 10px; margin: auto; line-height: 2.0; box-shadow: rgba(0, 0, 0, 0.1);">
+            <section id="Berita Utama">
+            <h2>Fulan Tertangkap Basah Ngoding Jam 3 Pagi Demi Push ke GitHub</h2>
+            <img src="https://exampllee.vercel.app/assets/G07.gif" alt="fulan ngoding" width="700px" height="400px">
+            <p><b>Jakarta, Portal Fulan</b>- Warga sekitar dikejutkan dengan suara ketikan keyboard yang tak kunjung berhenti. Setelah diselidiki, ternyata sumber suara berasal dari kamar Fulan yang sedang men-deploy project-nya ke Vercel</p>
+            <p>"Aku cuma mau memastikan web-nya responsif sebelum tidur", ujar Fulan sambil menyeruput kopi dingin yang  udah cair dar jam 10 malam.</p>
+            <p>Menurut pengakuan saksi, Fulan sudah tiga malam tidak tidur gara-gara memperbaiki error <em>vite-pligin-pwa missing</em>. Namun akhirnya project berhasil jalan dan langsung mendapat 5 ⭐ di GitHub dari teman satu kos-nya.</p>
+           
+            <h3>Fakta Coding Fulan</h3>
+            <ul>
+                <li>Suka debugging sambil dengerin musik anime</li>
+                <li>Pernah typo <em>console.log jadi consola.lag</em></li>
+                <li>Setiap error dianggap "ujian cinta terhadap sintaks"</li>
+            </ul>
+
+            <h3>Top 3 Error Paling Sering Ditemui</h3>
+            <ol>
+                <li>Missing semicolon (;) setelah jam 2 pagi</li>
+                <li>Path image tidak terbaca di deploy</li>
+                <li>"Cannot read property 'undefined' of undefined" — klasik!</li>
+            </ol>
+
+            <h3>Daftar Konsumsi Lembur Fulan</h3>
+            <table style="width: 100%; border-collapse: collapse; text-align: center; font-size: 14px;">
+                <tr style="border: 1px solid none; padding: 6px; background-color: #cbdde9;" colspan="4"> 
+                    <th style="border: 1px solid none; padding: 6px;">No</th>
+                    <th style="border: 1px solid none; padding: 6px;">Menu</th>
+                    <th style="border: 1px solid none; padding: 6px;">Jam Konsumsi</th>
+                    <th style="border: 1px solid none; padding: 6px;">Status</th>
+                </tr>
+                <tr style="border: 1px solid none; padding: 6px;" colspan="4"> 
+                    <th style="border: 1px solid none; padding: 6px;">1</th>
+                    <th style="border: 1px solid none; padding: 6px;">Kopi Tubruk</th>
+                    <th style="border: 1px solid none; padding: 6px;">22.00</th>
+                    <th style="border: 1px solid none; padding: 6px;">Habis</th>
+                </tr>
+                <tr style="border: 1px solid none; padding: 6px;" colspan="4"> 
+                    <th style="border: 1px solid none; padding: 6px;">2</th>
+                    <th style="border: 1px solid none; padding: 6px;">Mie Goreng Instan</th>
+                    <th style="border: 1px solid none; padding: 6px;">00.30</th>
+                    <th style="border: 1px solid none; padding: 6px;">Pending (kegigit error)</th>
+                </tr>
+                <tr style="border: 1px solid none; padding: 6px;" colspan="4"> 
+                    <th style="border: 1px solid none; padding: 6px;">3</th>
+                    <th style="border: 1px solid none; padding: 6px;">Roti Sobek</th>
+                    <th style="border: 1px solid none; padding: 6px;">02.00</th>
+                    <th style="border: 1px solid none; padding: 6px;">Belum Disentuh</th>
+                </tr>
+                <table>
+             <p>Dan inilah Motto Hidupnya:</p>
+             <p style="background-color: #cbdde9; text-align: center;">"Kalau codingan gagal, bukan berarti kamu gagal. Mungkin cuma belum di-save."</p>
+             </table>
+
+             <h3 style="color: #355485;">Belajar HTML Langsung dari Sumbernya</h3>
+             <p>Berikut cuplikan referensi situs belajar favorit Fulan:</p>
+             <iframe  class="frame" src="https://www.petanikode.com/" title="situs belajaar html"></iframe>
+            </section>
+        </div>
+
+        <!---Rigth Sidebar-->
+        <aside class="sidebar" style="margin:auto">
+            <h2 style="color: #355485;">Fakta Unik Tentang Fulan</h2>
+            <ul>
+                <li>Ngoding pakai mode gelap bahkan di siang bolong</li>
+                <li>Punya 7 repository bernama final-final-v3</li>
+                <li>Pernah rename folder jadi "fiks-beneran-terkahir".</li>
+            </ul>
+
+            <h3>Jadwal Kegiatan Harian</h3>
+            <table style="width: auto; border-collapse: collapse; text-align: center; font-size: 14px;">
+                <tr style=padding:6px; colspan="2">
+                    <th style="background-color: none; padding: 6px;" colspan="2">Waktu</th>
+                    <th style="background-color: none; padding: 6px;" colspan="2">Kegiatan</th>
+                </tr>
+                <tr style="padding:6px; background-color: rgba(0, 0, 0, 0.1);" colspan="2">
+                    <th style="padding:6px; background-color: rgba(0, 0, 0, 0.1);" colspan="2">09.00</th>
+                    <th style="padding:6px;background-color: rgba(0, 0, 0, 0.1);"  colspan="2">Kelas Pemrograman Web</th>
+                </tr>
+                </tr>
+                <tr style="padding:6px;background-color: rgba(0, 0, 0, 0.1);"  colspan="2">
+                    <th style="padding:6px;background-color: rgba(0, 0, 0, 0.1);"  colspan="2">13.00</th>
+                    <th style="padding:6px;background-color: rgba(0, 0, 0, 0.1);"  colspan="2">Ngopi sambil baca dokumentasi</th>
+                </tr>
+                <tr style="padding:6px;background-color: rgba(0, 0, 0, 0.1);"  colspan="2">
+                    <th style="padding:6px;background-color: rgba(0, 0, 0, 0.1);"  colspan="2">21.00</th>
+                    <th style="padding:6px;background-color: rgba(0, 0, 0, 0.1);"  colspan="2">Debug sampai lupa waktu</th>
+                </tr>
+            </table>
+         </div>
+    </main>
+
+    <!---Footer-->
+    <footer class="footer" style="padding: 20px;">
+        <p>Hubungi redaksi: redaksi@portalfun.id</p>
+        <a href="#top">⬆️ kembali ke atas</a>
+       <p>&copy;2025 Portal Fulan - Semua bug milik bersama 🐞</p>
+    </footer>
+    
+</body>
+</html>
