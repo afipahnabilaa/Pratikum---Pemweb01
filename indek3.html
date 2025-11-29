@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Sesi 3 Interaktif - console.table()</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background: #eef2f7;
+      line-height: 1.6;
+    }
+    .box {
+      background: white;
+      padding: 20px;
+      border-radius: 6px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 12px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 6px;
+      background: #2563eb;
+      color: white;
+      margin-top: 10px;
+    }
+    button:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Syntax, Variabel, dan Data Types (Interaktif)</h1>
+
+  <div class="box">
+    <button onclick="tampilkanData()">Tampilkan Data di Console</button>
+  </div>
+
+  <script>
+    function tampilkanData() {
+
+      // 3.1 Deklarasi Variabel
+      let nama = "Edo";
+      const umur = 21;
+      let isStudent = true;
+
+      // 3.2 Identifiers yang diperbaiki
+      let nama1 = "Benar (dari 1nama)";
+      let angkaLet = 10; // dari variable let = 10
+      let Nama = "Benar tetapi berbeda (case-sensitive)";
+
+      // 3.3 Data Types
+      let mahasiswa = { nama: "Edo", prodi: "TI" };
+      let hobi = ["coding", "game", "olahraga"];
+
+      // Gabungan semua data
+      let dataSemua = {
+        Variabel: { nama, umur, isStudent },
+        Identifiers: { nama1, angkaLet, Nama },
+        Mahasiswa: mahasiswa,
+        Hobi: hobi
+      };
+
+      // Tampilkan tabel ke console
+      console.table(dataSemua);
+
+      alert("Data berhasil ditampilkan di console!");
+    }
+  </script>
+
+</body>
+</html>

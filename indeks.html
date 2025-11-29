@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan JavaSAcript: Inline, Innternal, Eksternal</title>
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background: #f4f4f4;
+      line-height: 1.6;
+    }
+    h2 {
+      margin-top: 30px;
+    }
+    button {
+      padding: 10px 18px;
+      margin: 6px;
+      font-size: 15px;
+      cursor: pointer;
+      border: none;
+      background: #2563eb;
+      color: white;
+      border-radius: 6px;
+    }
+    button:hover {
+      opacity: 0.9;
+    }
+    #box {
+      margin-top: 10px;
+    }
+    hr {
+      margin: 30px 0;
+    }
+  </style>
+
+  <script>
+    function ubahTeks() {
+        document.getElementById("Judul").innerText =
+        "teks sudah berubah oleh JavaScript!";
+    }
+
+    function ubahWarna() {
+        document.getElementById("Judul").style.color =
+        "red";
+    }
+  </script>
+</head>
+<body>
+    <h2>Praktik Inline JavaScript</h2>
+    <!--Tombol onclick-->
+    <button onclick="alert('Halo, saya belajar JavaScript!')">
+     Klik Saya (onklick)   
+    </button>
+    <!--Tombol onmouseover-->
+    <button onmouseover="alert('Mouse sedang berada diatas tombol!')">
+     Arahkan Mouse (onmouseover)   
+    </button>
+    <!--Tombol ondblclick-->
+    <button ondblclick="alert('Tombol klik dua kali')">
+     Klik dua kali (ondbklick)   
+    </button>
+
+    <hr>
+
+    <h2>Praktikum Internal JavaScript</h2>
+  
+    <h3 id="Judul">ini judul awal</h3>
+
+    <button onclick="ubahTeks()">Ubah Judul</button>
+    <button onclick="ubahWarna()">Ubah Warna</button>
+
+    <hr>
+
+    <h2>Praktik Ekternal JavaScript</h2>
+
+    <div id="box" style="width:100px;height:100px;background:lightgray;"></div>
+
+    <button onclick="tambahBorder()">Tambah Border</button>
+    <button onclick="hapusBorder()">Hapus Border</button>
+
+    <!--Panggil File JavaScript Eksternal-->
+    <script src="script.js"></script>
+</body>
+</html>
+</body>
+</html>

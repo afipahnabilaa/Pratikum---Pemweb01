@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Sesi 4 - Operators</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background: #eef2f7;
+      line-height: 1.6;
+    }
+    .box {
+      background: white;
+      padding: 20px;
+      border-radius: 6px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 12px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 6px;
+      background: #2563eb;
+      color: white;
+      margin-top: 10px;
+    }
+    button:hover {
+      opacity: 0.9;
+    }
+    input {
+      padding: 8px;
+      width: 180px;
+      border-radius: 5px;
+      border: 1px solid #aaa;
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Operators (JavaScript)</h1>
+
+
+  <!-- 4.1, 4.2, 4.3, 4.4 -->
+  <div class="box">
+    <h2>Operasi Dasar (Klik untuk Melihat Console)</h2>
+    <!-- <p>Semua output ditampilkan di <strong>Console (F12 → Console)</strong>.</p> -->
+    <button onclick="jalankanOperator()">Jalankan Semua Operator</button>
+  </div>
+
+
+  <!-- Tugas: Logika Mengendarai Motor -->
+  <div class="box">
+    <h2>Logika Izin Mengendarai Motor</h2>
+
+    <p>Masukkan usia dan status punya SIM C untuk mengecek izin.</p>
+
+    <input type="number" id="usiaInput" placeholder="Usia Anda">
+    
+    <select id="simInput">
+      <option value="true">Punya SIM C</option>
+      <option value="false">Tidak Punya SIM C</option>
+    </select>
+
+    <br><br>
+    <button onclick="cekIzin()">Cek Izin Mengendarai Motor</button>
+
+    <p id="hasilIzin" style="margin-top: 15px; font-weight:bold;"></p>
+  </div>
+
+
+
+  <script>
+    function jalankanOperator() {
+
+      // 4.1 Arithmetic
+      let x = 10;
+      let y = 3;
+      console.log("=== Arithmetic ===");
+      console.log("x + y =", x + y);
+      console.log("x - y =", x - y);
+      console.log("x * y =", x * y);
+      console.log("x / y =", x / y);
+      console.log("x % y =", x % y);
+
+      // 4.2 Assignment
+      let a = 10;
+      a += 5;
+      a -= 2;
+      console.log("=== Assignment ===");
+      console.log("Nilai akhir a =", a);
+
+      // 4.3 Comparison
+      let p = 5;
+      console.log("=== Comparison ===");
+      console.log("p == 5 :", p == 5);
+      console.log("p === '5' :", p === "5");
+      console.log("p != 10 :", p != 10);
+      console.log("p > 8 :", p > 8);
+
+      // 4.4 Logical
+      let usia = 20;
+      let punyaKTP = true;
+      console.log("=== Logical ===");
+      console.log("usia >= 18 && punyaKTP :", usia >= 18 && punyaKTP);
+      console.log("usia < 18 || punyaKTP :", usia < 18 || punyaKTP);
+      console.log("!punyaKTP :", !punyaKTP);
+
+      alert("Semua operator telah dijalankan! Lihat hasilnya di Console.");
+    }
+
+
+
+    // ===== Tugas: Logika Mengendarai Motor =====
+    function cekIzin() {
+      let usia = parseInt(document.getElementById("usiaInput").value);
+      let punyaSim = document.getElementById("simInput").value === "true";
+
+      let hasil = document.getElementById("hasilIzin");
+
+      // Logika utama:
+      // Boleh mengendarai motor jika:
+      // usia minimal 17 dan punya SIM
+      if (usia >= 17 && punyaSim) {
+        hasil.innerText = "✔ Anda boleh mengendarai motor.";
+        hasil.style.color = "green";
+      } else if (usia >= 17 && !punyaSim) {
+        hasil.innerText = "✖ Anda cukup umur, tetapi belum punya SIM C.";
+        hasil.style.color = "orange";
+      } else {
+        hasil.innerText = "❌ Anda belum boleh mengendarai motor.";
+        hasil.style.color = "red";
+      }
+    }
+  </script>
+
+</body>
+</html>

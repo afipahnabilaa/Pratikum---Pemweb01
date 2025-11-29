@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Latihan Jenis Output JavaScript</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      line-height: 1.6;
+      background: #f7f7f7;
+    }
+    h2 {
+      margin-top: 25px;
+    }
+    .box {
+      background: white;
+      padding: 20px;
+      border-radius: 6px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin-bottom: 25px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Latihan Jenis Output JavaScript</h1>
+
+  <div class="box">
+    <h2>1. innerHTML</h2>
+    <p id="demo"></p>
+  </div>
+
+  <div class="box">
+    <h2>alert()</h2>
+    <p>Alert akan muncul otomatis saat halaman dimuat.</p>
+  </div>
+
+  <div class="box">
+    <h2>console.log()</h2>
+    <p>Lihat output console di Developer Tools (F12).</p>
+  </div>
+
+  <div class="box">
+    <h2>document.write()</h2>
+    <p>Output akan muncul di bawah bagian ini.</p>
+  </div>
+
+  <hr>
+
+  <!-- SCRIPT -->
+  <script>
+    // 1. innerHTML
+    document.getElementById("demo").innerHTML =
+      "Output ini muncul menggunakan innerHTML!";
+
+    // 2. alert()
+    alert("Halo dari alert()!");
+
+    // 3. console.log()
+    console.log("Pesan ini muncul di console dengan console.log()");
+
+    // 4. document.write()
+    document.write("<h3>Ini ditulis dengan document.write()</h3>");
+  </script>
+
+</body>
+</html>
